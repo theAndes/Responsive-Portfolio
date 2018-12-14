@@ -1,0 +1,323 @@
+/* Zero out margin and padding. Set box*/
+*   {
+    box-sizing: border-box;
+    margin:  0;
+    padding: 0;
+}
+
+body{
+    background-image: url("../images/tex2res5.png");/*set repeat image*/
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    
+}
+
+
+
+
+/* #############################################################*/
+/* #MAKE THE FOOTER (complicated fix im sure there is an easier one)##################*/
+/* #############################################################*/
+
+html, body {
+    height: calc(100% - 60px);   /*allow footer to move with content but stay at bottom of page if no content*/
+    margin: 0;
+    min-width: 1000px;  /*prevent unusual screen size to mess with header/footer width*/
+  }
+ 
+  #full-wrap {              /*wrap all but the foter*/
+    min-height: 100%;
+  }
+
+
+  /* #############################################################*/
+/* ##############Style Header, Name, and Links##################*/
+/* #############################################################*/
+
+.border-bottom{                        /*header border*/
+    border-bottom: 3px solid #ccc;
+    background-color: #fff;
+}
+.head-container {           /*contain both name and link divs*/
+    overflow: auto;
+    width: 960px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+.name,     /*attempt to set middle of container*/
+.links  {
+    float: left;
+    height: 80px;
+    padding-top: 1em;
+}
+
+/*adjusting name div size*/
+.name   {
+    font-size: 24px;
+    width: 30%;
+    background-color:#4285f4;
+    color: #fff;
+    text-align: center;
+    /*padding-left: ;  /*first letter align with About/Contact/Portfolio*/
+}
+
+
+/*link Styles*/
+
+.links  {
+    width: 70%;     /*div size adjust*/
+    padding-top: 2em; /*align text with middle with .name*/
+}
+
+table   {           /*right float link div and adjust size*/
+    float:right;
+    width:50%;
+    border-collapse: collapse;
+}
+
+td > a{
+    text-decoration: none; /*remove link underline*/
+    color: #777;
+}
+
+td > a:hover{
+    color:#4285f4;
+}
+
+
+#col-2  {       /*td border lines*/
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+}
+
+/* #############################################################*/
+/* ##############Style  the meat and potatoees #################*/
+/* ###############This also styles the other pages##############*/
+/*#############################################################*/
+
+
+.middle{                    /*middle of page content */
+    padding: 40px 0 60px 0;
+    margin-bottom: 60px;
+
+}
+.content{               /*Encapsulate all content*/
+    overflow: hidden;
+    width: 960px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #777;
+    padding: 0 30px 10px 30px;
+}
+.about-container{
+    margin: auto;
+}
+.about{
+    font-size: 24px;
+    height: 80px;
+    padding-top: 1em;
+    width: 30%;
+    background-color:#fff;
+    color: #4285f4;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+.words{
+    padding-top: 30px;
+}
+.words img{
+    margin: 0 25px 0 0;
+    float: left;
+    width:auto;
+    height: 225px;
+    background-color: #ccc;
+}
+
+/*content spacing and paragraph indent*/
+.top,
+.indent{
+    line-height: 2;
+}
+.top{
+    margin-top:-10px;
+}
+.indent{
+    text-indent: 50px;
+}
+
+
+
+/* ##############Portfolio.html styling #################*/
+
+
+
+.port-items{
+    margin-top: 15px;
+
+}
+
+.photo{
+    position: relative;
+    margin: 15px 40px 15px 0px;
+    float: left;
+    width: 350px;
+    height: 300px;
+    background-color: #ccc;
+    border: 1px solid;
+
+}
+.photo > img {
+    width: 100%;
+}
+.photo > div{
+    width: 100%;
+    height: 60px;
+    background-color: #4285f4;
+    text-align: center;
+    padding-top: 1em;
+    font-size: 20px;
+    bottom:25px;
+    position: absolute;
+    font-weight: bold;
+
+}
+
+.folio-link:link{
+    text-decoration: none;
+    color:#fff;
+}
+.folio-link:hover{
+    color: #ccc;
+}
+/* ##############for the contact.html styling #################*/
+
+
+
+input{          /*the input fields*/
+    width: 100%;
+    height: 30px;
+}
+
+.words > div{              /*for contact.html*/
+    margin-bottom: 5px;
+    color: #777;
+}
+#message{
+    width: 100%;
+    height: 125px;
+    max-height: 125px;
+    resize: vertical;
+    
+}
+
+#btn{
+   height: 45px;
+   width: 120px; 
+   background-color: #4285f4;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+   font-size: 18px;
+}
+#btn:hover{
+    color: #ccc;
+}
+
+/* #############################################################*/
+/* ##############         footer stuff        ##################*/
+/* #############################################################*/
+
+#foot{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    height: 60px;
+    color: #fff;
+    background-color: #777;
+    border-top: 10px solid #4285f4;
+}
+.footer-info{
+    width: 960px;
+    padding-top: 1.5em;
+    margin: auto;
+   
+}
+/*###################################################*/
+/*###################################################*/
+/*############      MEDIUM  MEDIA   #################*/
+/*###################################################*/
+/*###################################################*/
+
+@media only screen and (max-width:780px){
+  
+
+    .head-container {           /*contain both name and link divs*/
+        overflow: hidden;
+        width: auto;
+    }
+  .name{
+      width: 40%;
+  }
+  .links{
+      width:60%;
+  }
+    .content{
+        width:90%;
+    }
+
+    .words img
+    {
+        width: 50%;
+        height: auto;
+    }
+
+    .photo{
+        width:42%;
+        height: 172px;
+        overflow: hidden;
+    }
+}
+
+
+
+
+
+/*###################################################*/
+/*###################################################*/
+/*############      SMALL  MEDIA    ##################*/
+/*###################################################*/
+/*###################################################*/
+@media only screen and (max-width: 640px){
+
+    html, body{
+        min-width: 100%;
+    }
+
+    .head-container {           /*contain both name and link divs*/
+        overflow: hidden;
+        width: 100%;
+    }
+    .name,     /*Adjust width to 100% for responsiveness*/
+    .links,
+    .about,
+    .footer-info  {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    table{
+        width:100%;
+    }
+    .content{
+        width:90%;
+    }
+
+    .words img,
+    .photo{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
