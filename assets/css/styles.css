@@ -279,6 +279,9 @@ input{          /*the input fields*/
         height: 172px;
         overflow: hidden;
     }
+
+    .footer-info  {
+        width: 100%;}
 }
 
 
