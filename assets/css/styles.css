@@ -249,6 +249,23 @@ input{          /*the input fields*/
 /*###################################################*/
 /*###################################################*/
 
+@media only screen and (max-width:980px){
+        .content {
+            width: 60%;
+            margin-left: 20px;
+        }
+ 
+        .photo{
+            width:40%;
+            height:160px;
+        }
+    .photo > div {
+        bottom:0;
+        }
+}
+
+
+
 @media only screen and (max-width:780px){
   
     html, body{
